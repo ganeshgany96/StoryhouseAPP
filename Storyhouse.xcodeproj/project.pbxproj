@@ -3,29 +3,61 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		402C5420B303E5B566D79572 /* Pods_Storyhouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5034083011BF102200E5B02 /* Pods_Storyhouse.framework */; };
 		CF094F3B26F259EB0043BB14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF094F3A26F259EB0043BB14 /* AppDelegate.swift */; };
 		CF094F3D26F259EB0043BB14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF094F3C26F259EB0043BB14 /* SceneDelegate.swift */; };
-		CF094F3F26F259EB0043BB14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF094F3E26F259EB0043BB14 /* ViewController.swift */; };
 		CF094F4226F259EB0043BB14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF094F4026F259EB0043BB14 /* Main.storyboard */; };
 		CF094F4526F259EB0043BB14 /* Storyhouse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF094F4326F259EB0043BB14 /* Storyhouse.xcdatamodeld */; };
 		CF094F4726F259EC0043BB14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF094F4626F259EC0043BB14 /* Assets.xcassets */; };
 		CF094F4A26F259EC0043BB14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF094F4826F259EC0043BB14 /* LaunchScreen.storyboard */; };
+		CF094F7A26F26A280043BB14 /* GoogleLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF094F7926F26A280043BB14 /* GoogleLoginViewController.swift */; };
+		CF1E63E326F8FD730051E1AF /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E63E226F8FD730051E1AF /* Response.swift */; };
+		CF20545327022F7400E56EBF /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF20545227022F7400E56EBF /* TabViewController.swift */; };
+		CF566096270386CD00617290 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF566095270386CD00617290 /* Post.swift */; };
+		CF56609827038BB100617290 /* DBoperationGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56609727038BB000617290 /* DBoperationGet.swift */; };
+		CF587C6226F50AC10096D4FD /* StoryHouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF587C6126F50AC10096D4FD /* StoryHouseViewController.swift */; };
+		CF587C6426F50AC90096D4FD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF587C6326F50AC90096D4FD /* SearchViewController.swift */; };
+		CF587C6626F50AD20096D4FD /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF587C6526F50AD20096D4FD /* PostViewController.swift */; };
+		CF587C6826F50ADA0096D4FD /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF587C6726F50ADA0096D4FD /* AccountViewController.swift */; };
+		CF90215326F5F23A0071F086 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF90215226F5F23A0071F086 /* CreatePostViewController.swift */; };
+		CF90215526F5F5A40071F086 /* Host.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF90215426F5F5A40071F086 /* Host.swift */; };
+		CF90215726F5F5CB0071F086 /* SyncProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF90215626F5F5CB0071F086 /* SyncProcess.swift */; };
+		CF90215926F606BD0071F086 /* GoogleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF90215826F606BD0071F086 /* GoogleObject.swift */; };
+		CFE9A5E926FEB5B700F7F25F /* DBoperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE9A5E826FEB5B700F7F25F /* DBoperation.swift */; };
+		CFE9A5EF26FEB8FF00F7F25F /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE9A5EE26FEB8FF00F7F25F /* Entity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C7C8CD6DA32AC36BE353D17 /* Pods-Storyhouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Storyhouse.release.xcconfig"; path = "Target Support Files/Pods-Storyhouse/Pods-Storyhouse.release.xcconfig"; sourceTree = "<group>"; };
+		C5034083011BF102200E5B02 /* Pods_Storyhouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Storyhouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA5BBD711A7C73700FAB358F /* Pods-Storyhouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Storyhouse.debug.xcconfig"; path = "Target Support Files/Pods-Storyhouse/Pods-Storyhouse.debug.xcconfig"; sourceTree = "<group>"; };
 		CF094F3726F259EB0043BB14 /* Storyhouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Storyhouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF094F3A26F259EB0043BB14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF094F3C26F259EB0043BB14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CF094F3E26F259EB0043BB14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CF094F4126F259EB0043BB14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF094F4426F259EB0043BB14 /* Storyhouse.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Storyhouse.xcdatamodel; sourceTree = "<group>"; };
 		CF094F4626F259EC0043BB14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF094F4926F259EC0043BB14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF094F4B26F259EC0043BB14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF094F7926F26A280043BB14 /* GoogleLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginViewController.swift; sourceTree = "<group>"; };
+		CF1E63E226F8FD730051E1AF /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		CF20545227022F7400E56EBF /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		CF566095270386CD00617290 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		CF56609727038BB000617290 /* DBoperationGet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBoperationGet.swift; sourceTree = "<group>"; };
+		CF587C6126F50AC10096D4FD /* StoryHouseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryHouseViewController.swift; sourceTree = "<group>"; };
+		CF587C6326F50AC90096D4FD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		CF587C6526F50AD20096D4FD /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		CF587C6726F50ADA0096D4FD /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		CF90215226F5F23A0071F086 /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		CF90215426F5F5A40071F086 /* Host.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Host.swift; sourceTree = "<group>"; };
+		CF90215626F5F5CB0071F086 /* SyncProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncProcess.swift; sourceTree = "<group>"; };
+		CF90215826F606BD0071F086 /* GoogleObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleObject.swift; sourceTree = "<group>"; };
+		CFE9A5E826FEB5B700F7F25F /* DBoperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBoperation.swift; sourceTree = "<group>"; };
+		CFE9A5EE26FEB8FF00F7F25F /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +65,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				402C5420B303E5B566D79572 /* Pods_Storyhouse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E963A7271938488954C94C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA5BBD711A7C73700FAB358F /* Pods-Storyhouse.debug.xcconfig */,
+				7C7C8CD6DA32AC36BE353D17 /* Pods-Storyhouse.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CF094F2E26F259EB0043BB14 = {
 			isa = PBXGroup;
 			children = (
 				CF094F3926F259EB0043BB14 /* Storyhouse */,
 				CF094F3826F259EB0043BB14 /* Products */,
+				9E963A7271938488954C94C1 /* Pods */,
+				FAACFABCC22497A4A723EFB6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,7 +104,9 @@
 			children = (
 				CF094F3A26F259EB0043BB14 /* AppDelegate.swift */,
 				CF094F3C26F259EB0043BB14 /* SceneDelegate.swift */,
-				CF094F3E26F259EB0043BB14 /* ViewController.swift */,
+				CF094F5326F25A380043BB14 /* View-Model */,
+				CF094F5226F25A310043BB14 /* View */,
+				CF094F5126F25A280043BB14 /* Model */,
 				CF094F4026F259EB0043BB14 /* Main.storyboard */,
 				CF094F4626F259EC0043BB14 /* Assets.xcassets */,
 				CF094F4826F259EC0043BB14 /* LaunchScreen.storyboard */,
@@ -70,6 +116,50 @@
 			path = Storyhouse;
 			sourceTree = "<group>";
 		};
+		CF094F5126F25A280043BB14 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF90215426F5F5A40071F086 /* Host.swift */,
+				CFE9A5EE26FEB8FF00F7F25F /* Entity.swift */,
+				CF90215626F5F5CB0071F086 /* SyncProcess.swift */,
+				CF1E63E226F8FD730051E1AF /* Response.swift */,
+				CF90215826F606BD0071F086 /* GoogleObject.swift */,
+				CF566095270386CD00617290 /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF094F5226F25A310043BB14 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF094F7926F26A280043BB14 /* GoogleLoginViewController.swift */,
+				CF587C6126F50AC10096D4FD /* StoryHouseViewController.swift */,
+				CF587C6326F50AC90096D4FD /* SearchViewController.swift */,
+				CF587C6726F50ADA0096D4FD /* AccountViewController.swift */,
+				CF587C6526F50AD20096D4FD /* PostViewController.swift */,
+				CF90215226F5F23A0071F086 /* CreatePostViewController.swift */,
+				CF20545227022F7400E56EBF /* TabViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF094F5326F25A380043BB14 /* View-Model */ = {
+			isa = PBXGroup;
+			children = (
+				CFE9A5E826FEB5B700F7F25F /* DBoperation.swift */,
+				CF56609727038BB000617290 /* DBoperationGet.swift */,
+			);
+			path = "View-Model";
+			sourceTree = "<group>";
+		};
+		FAACFABCC22497A4A723EFB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5034083011BF102200E5B02 /* Pods_Storyhouse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +167,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF094F4E26F259EC0043BB14 /* Build configuration list for PBXNativeTarget "Storyhouse" */;
 			buildPhases = (
+				7F97D5283016FBE437F63114 /* [CP] Check Pods Manifest.lock */,
 				CF094F3326F259EB0043BB14 /* Sources */,
 				CF094F3426F259EB0043BB14 /* Frameworks */,
 				CF094F3526F259EB0043BB14 /* Resources */,
+				64FFABC414391CE38739A53B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,15 +227,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		64FFABC414391CE38739A53B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Storyhouse/Pods-Storyhouse-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Storyhouse/Pods-Storyhouse-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Storyhouse/Pods-Storyhouse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F97D5283016FBE437F63114 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Storyhouse-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CF094F3326F259EB0043BB14 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF90215326F5F23A0071F086 /* CreatePostViewController.swift in Sources */,
+				CF587C6626F50AD20096D4FD /* PostViewController.swift in Sources */,
+				CF587C6426F50AC90096D4FD /* SearchViewController.swift in Sources */,
+				CF90215726F5F5CB0071F086 /* SyncProcess.swift in Sources */,
+				CF566096270386CD00617290 /* Post.swift in Sources */,
+				CF90215526F5F5A40071F086 /* Host.swift in Sources */,
+				CF1E63E326F8FD730051E1AF /* Response.swift in Sources */,
+				CFE9A5EF26FEB8FF00F7F25F /* Entity.swift in Sources */,
+				CF587C6226F50AC10096D4FD /* StoryHouseViewController.swift in Sources */,
+				CF20545327022F7400E56EBF /* TabViewController.swift in Sources */,
+				CF56609827038BB100617290 /* DBoperationGet.swift in Sources */,
+				CF90215926F606BD0071F086 /* GoogleObject.swift in Sources */,
+				CF094F7A26F26A280043BB14 /* GoogleLoginViewController.swift in Sources */,
+				CFE9A5E926FEB5B700F7F25F /* DBoperation.swift in Sources */,
 				CF094F4526F259EB0043BB14 /* Storyhouse.xcdatamodeld in Sources */,
-				CF094F3F26F259EB0043BB14 /* ViewController.swift in Sources */,
 				CF094F3B26F259EB0043BB14 /* AppDelegate.swift in Sources */,
 				CF094F3D26F259EB0043BB14 /* SceneDelegate.swift in Sources */,
+				CF587C6826F50ADA0096D4FD /* AccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +435,7 @@
 		};
 		CF094F4F26F259EC0043BB14 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA5BBD711A7C73700FAB358F /* Pods-Storyhouse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -306,6 +455,7 @@
 		};
 		CF094F5026F259EC0043BB14 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C7C8CD6DA32AC36BE353D17 /* Pods-Storyhouse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
