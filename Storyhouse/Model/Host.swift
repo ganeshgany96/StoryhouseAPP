@@ -7,9 +7,10 @@
 
 import UIKit
 
-let strPath = "http://192.168.1.7:6000"
+let strPath = "http://192.168.1.4:1020"
 
 class Host: NSObject {
     let googleupload = "\(strPath)/googleResultUpload"
     let postupload = "\(strPath)/postResultUpload"
+    let searchreq = "\(strPath)/SearchPost/"
 }

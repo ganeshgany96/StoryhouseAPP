@@ -17,6 +17,9 @@
 		CF094F7A26F26A280043BB14 /* GoogleLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF094F7926F26A280043BB14 /* GoogleLoginViewController.swift */; };
 		CF1E63E326F8FD730051E1AF /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E63E226F8FD730051E1AF /* Response.swift */; };
 		CF20545327022F7400E56EBF /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF20545227022F7400E56EBF /* TabViewController.swift */; };
+		CF3C59D92707699100D05FD3 /* SearchPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3C59D82707699100D05FD3 /* SearchPostTableViewCell.swift */; };
+		CF3C59DB2707889600D05FD3 /* ShoryHouseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3C59DA2707889600D05FD3 /* ShoryHouseTableViewCell.swift */; };
+		CF3DF1D427061E0C00CA695B /* DraftListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3DF1D327061E0C00CA695B /* DraftListTableViewCell.swift */; };
 		CF566096270386CD00617290 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF566095270386CD00617290 /* Post.swift */; };
 		CF56609827038BB100617290 /* DBoperationGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56609727038BB000617290 /* DBoperationGet.swift */; };
 		CF587C6226F50AC10096D4FD /* StoryHouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF587C6126F50AC10096D4FD /* StoryHouseViewController.swift */; };
@@ -46,6 +49,9 @@
 		CF094F7926F26A280043BB14 /* GoogleLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginViewController.swift; sourceTree = "<group>"; };
 		CF1E63E226F8FD730051E1AF /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		CF20545227022F7400E56EBF /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		CF3C59D82707699100D05FD3 /* SearchPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPostTableViewCell.swift; sourceTree = "<group>"; };
+		CF3C59DA2707889600D05FD3 /* ShoryHouseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoryHouseTableViewCell.swift; sourceTree = "<group>"; };
+		CF3DF1D327061E0C00CA695B /* DraftListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftListTableViewCell.swift; sourceTree = "<group>"; };
 		CF566095270386CD00617290 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		CF56609727038BB000617290 /* DBoperationGet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBoperationGet.swift; sourceTree = "<group>"; };
 		CF587C6126F50AC10096D4FD /* StoryHouseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryHouseViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +143,7 @@
 				CF587C6326F50AC90096D4FD /* SearchViewController.swift */,
 				CF587C6726F50ADA0096D4FD /* AccountViewController.swift */,
 				CF587C6526F50AD20096D4FD /* PostViewController.swift */,
+				CF3DF1D527061E1600CA695B /* DraftCell */,
 				CF90215226F5F23A0071F086 /* CreatePostViewController.swift */,
 				CF20545227022F7400E56EBF /* TabViewController.swift */,
 			);
@@ -150,6 +157,16 @@
 				CF56609727038BB000617290 /* DBoperationGet.swift */,
 			);
 			path = "View-Model";
+			sourceTree = "<group>";
+		};
+		CF3DF1D527061E1600CA695B /* DraftCell */ = {
+			isa = PBXGroup;
+			children = (
+				CF3DF1D327061E0C00CA695B /* DraftListTableViewCell.swift */,
+				CF3C59D82707699100D05FD3 /* SearchPostTableViewCell.swift */,
+				CF3C59DA2707889600D05FD3 /* ShoryHouseTableViewCell.swift */,
+			);
+			path = DraftCell;
 			sourceTree = "<group>";
 		};
 		FAACFABCC22497A4A723EFB6 /* Frameworks */ = {
@@ -285,7 +302,10 @@
 				CF587C6226F50AC10096D4FD /* StoryHouseViewController.swift in Sources */,
 				CF20545327022F7400E56EBF /* TabViewController.swift in Sources */,
 				CF56609827038BB100617290 /* DBoperationGet.swift in Sources */,
+				CF3C59D92707699100D05FD3 /* SearchPostTableViewCell.swift in Sources */,
+				CF3DF1D427061E0C00CA695B /* DraftListTableViewCell.swift in Sources */,
 				CF90215926F606BD0071F086 /* GoogleObject.swift in Sources */,
+				CF3C59DB2707889600D05FD3 /* ShoryHouseTableViewCell.swift in Sources */,
 				CF094F7A26F26A280043BB14 /* GoogleLoginViewController.swift in Sources */,
 				CFE9A5E926FEB5B700F7F25F /* DBoperation.swift in Sources */,
 				CF094F4526F259EB0043BB14 /* Storyhouse.xcdatamodeld in Sources */,

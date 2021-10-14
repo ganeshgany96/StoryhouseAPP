@@ -41,14 +41,15 @@ class DBoperation: NSObject {
     func InsertCreatedPost(post:Post){
         let context = Context()
         let objentity = Entity()
+        let objgoog = GoogleObject.sharedInstance
         let entity =  NSEntityDescription.entity(forEntityName: objentity.post, in: context)
         let objpost = NSManagedObject(entity: entity!, insertInto: context)
         objpost.setValue(post.title, forKey: "title")
         objpost.setValue(post.storyDescription, forKey: "storyDescription")
         objpost.setValue(post.isDraft, forKey: "isDraft")
         objpost.setValue(post.isPost, forKey: "isPost")
-        objpost.setValue(post.useraccountid, forKey: "useraccountid")
-        objpost.setValue(post.storyid, forKey: "storyid")
+        objpost.setValue(objgoog.useraccountid, forKey: "useraccountid")
+        objpost.setValue(objgoog.storyid, forKey: "storyid")
         saveContext()
     }
     

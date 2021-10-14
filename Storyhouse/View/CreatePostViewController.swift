@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import Speech
+import AVKit
 
-class CreatePostViewController: UIViewController {
-
+class CreatePostViewController: UIViewController, UITextViewDelegate,UITextFieldDelegate {
+    @IBOutlet weak var imgmic: UIImageView!
+        
+    @IBOutlet var btnimg: UITapGestureRecognizer!
     @IBOutlet weak var titletxtfld: UITextField!
     @IBOutlet weak var storyTxtView: UITextView!
     @IBOutlet weak var uploadBtn: UIButton!
@@ -18,13 +22,21 @@ class CreatePostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         CornerRadius()
-       BorderColor()
+        BorderColor()
+        self.titletxtfld.delegate = self
+        self.storyTxtView.delegate = self
+        
         
     }
-  
-    @IBAction func uploadBtnTapped(_ sender: UIButton) {
     
-        let useraccount = GoogleObject()
+    @IBAction func imgMicImg(_ sender: Any) {
+        
+        
+        
+        
+    }
+    
+    @IBAction func uploadBtnTapped(_ sender: UIButton) {
         let dbopGet = DBoperationGet()
         if let title = self.titletxtfld!.text {
             if title.count>3 {
@@ -43,19 +55,18 @@ class CreatePostViewController: UIViewController {
         post.isPost = true
         post.isDraft = false
         dbopGet.GetUserAccountDetail()
+        let useraccount = GoogleObject.sharedInstance
         post.useraccountid = Int64(useraccount.useraccountid)
-        post.storyid += 1
-        let dict = ["title":post.title,"storydescription":post.storyDescription,"isPost":post.isPost,"isDraft":post.isDraft,"useraccountid":post.useraccountid,"storyid":post.storyid] as [String : Any]
-
+        let dict = ["title":post.title,"stroydecription":post.storyDescription,"isPost":post.isPost,"isDraft":post.isDraft,"useraccountid":post.useraccountid] as [String : Any]
         
         if let json = try? JSONSerialization.data(withJSONObject: dict, options: []) {
             let data = Data(json)
-//            self.indicator.isHidden = false
-//            self.indicator.startAnimating()
-//            DispatchQueue.main.async {
-                self.postUpload(data: data)
-//                self.indicator.stopAnimating()
-//            }
+            //            self.indicator.isHidden = false
+            //            self.indicator.startAnimating()
+            //            DispatchQueue.main.async {
+            self.postUpload(data: data)
+            //                self.indicator.stopAnimating()
+            //            }
             
             
         }
@@ -64,7 +75,42 @@ class CreatePostViewController: UIViewController {
     }
     
     @IBAction func saveBtnTapped(_ sender: UIButton) {
-     
+        let dbopGet = DBoperationGet()
+        if let title = self.titletxtfld!.text {
+            if title.count>3 {
+                post.title = title
+            }else{
+                return
+            }
+        }
+        if let stroydiscription = self.storyTxtView!.text {
+            if stroydiscription.count>50 {
+                post.storyDescription = stroydiscription
+            }else{
+                return
+            }
+        }
+        post.isPost = false
+        post.isDraft = true
+        dbopGet.GetUserAccountDetail()
+        let useraccount = GoogleObject.sharedInstance
+        post.useraccountid = Int64(useraccount.useraccountid)
+        let dict = ["title":post.title,"stroydecription":post.storyDescription,"isPost":post.isPost,"isDraft":post.isDraft,"useraccountid":post.useraccountid] as [String : Any]
+        
+        if let json = try? JSONSerialization.data(withJSONObject: dict, options: []) {
+            let data = Data(json)
+            //            self.indicator.isHidden = false
+            //            self.indicator.startAnimating()
+            //            DispatchQueue.main.async {
+            self.postUpload(data: data)
+            //                self.indicator.stopAnimating()
+            //            }
+            
+            
+        }
+        
+        dismiss(animated: true)
+        
     }
     
     @IBAction func backBtnTapped(_ sender: Any) {
@@ -87,10 +133,7 @@ class CreatePostViewController: UIViewController {
         }
         
         
-        
-        
     }
-    
     
     func CornerRadius(){
         uploadBtn.layer.cornerRadius = 5
@@ -106,6 +149,26 @@ class CreatePostViewController: UIViewController {
         titletxtfld.layer.borderWidth = 1
         titletxtfld.layer.borderColor = UIColor.systemOrange.cgColor
     }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.titletxtfld.resignFirstResponder()
+        return true
+    }
+    /* Updated for Swift 4 */
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n") {
+            storyTxtView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+    /* Older versions of Swift */
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n") {
+            storyTxtView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
     
 }
 extension CreatePostViewController{
@@ -114,8 +177,10 @@ extension CreatePostViewController{
         let dboperation =  DBoperation()
         let host = Host()
         let sync = SyncProcess()
+        let user = GoogleObject.sharedInstance
         sync.CreatedPostUpload(url: host.postupload, objdata: data,success: { result in
             print(result)
+            user.storyid = result["useraccountid"]  as! Int
             dboperation.InsertCreatedPost(post: self.post)
             
             //            self.objuseraccount.useraccountid = result["useraccountid"]  as! Int
