@@ -9,21 +9,47 @@ import UIKit
 
 class AccountViewController: UIViewController {
 
+    @IBOutlet weak var topTableView: UITableView!
+    
+    var arrobj = [NSArray]()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let sync = SyncProcess()
+        let host = Host()
+        let dbopGet = DBoperationGet()
+        dbopGet.GetUserAccountDetail()
+        let useraccount = GoogleObject.sharedInstance
+        let urls = "\(host.getuserpost)\(useraccount.useraccountid)"
+        sync.Getallstorypost(url:urls) { response in
+            self.arrobj = response as! [NSArray]
+        } Failure: { response in
+            self.arrobj = response as! [NSArray]
+        }
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+extension AccountViewController:UITableViewDelegate{
+    
+}
+extension AccountViewController:UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrobj.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "story", for: indexPath) as! TopFavTableViewCell
+        let obj = arrobj as! [NSDictionary]
+        let objpost = obj[indexPath.row]
+        cell.storydesc.text = (objpost.value(forKey: "stroydecription") as! String)
+        cell.titilelbl.text = (objpost.value(forKey: "title") as! String)
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+        
+    }
+    
+    
+}
+

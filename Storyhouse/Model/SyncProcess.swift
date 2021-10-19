@@ -80,4 +80,18 @@ class SyncProcess: NSObject {
         }
     }
     
+    func GetuserPost(url:String,success SuccessBlock: @escaping (NSArray)->Void,  Failure FailureBlock: @escaping (NSArray)->Void){
+        let objUrl = URL(string: url)
+        print(objUrl!)
+        Alamofire.request(url).responseJSON{ response in
+            if response.result.isSuccess {
+
+                SuccessBlock(response.result.value as! NSArray)
+
+            }else if response.result.isFailure{
+                FailureBlock(response.result.value  as! NSArray)
+            }
+        }
+    }
+    
 }

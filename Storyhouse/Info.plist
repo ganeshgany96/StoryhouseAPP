@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>to convert voice to text</string>
+	<string>We will use this microphone for testing our demo.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Your voice to text convert</string>
+	<string>We will speech recognition for testing demo</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

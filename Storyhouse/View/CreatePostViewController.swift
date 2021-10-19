@@ -8,10 +8,10 @@
 import UIKit
 import Speech
 import AVKit
-
-class CreatePostViewController: UIViewController, UITextViewDelegate,UITextFieldDelegate {
+import NRSpeechToText
+class CreatePostViewController: UIViewController, UITextViewDelegate,UITextFieldDelegate,SFSpeechRecognizerDelegate {
     @IBOutlet weak var imgmic: UIImageView!
-        
+    
     @IBOutlet var btnimg: UITapGestureRecognizer!
     @IBOutlet weak var titletxtfld: UITextField!
     @IBOutlet weak var storyTxtView: UITextView!
@@ -31,10 +31,38 @@ class CreatePostViewController: UIViewController, UITextViewDelegate,UITextField
     
     @IBAction func imgMicImg(_ sender: Any) {
         
-        
-        
+        NRSpeechToText.shared.authorizePermission { (authorize) in
+            if authorize {
+                if NRSpeechToText.shared.isRunning {
+                    NRSpeechToText.shared.stop()
+                    OperationQueue.main.addOperation {
+                        print("started...")
+//                        self.microphoneButton.setTitle("Start Recording", for: .normal)
+                    }
+                }
+                else {
+                    OperationQueue.main.addOperation {
+                        print("stop...")
+//                        self.microphoneButton.setTitle("Stop Recording", for: .normal)
+                    }
+                    self.startRecording()
+                }
+            }
+        }
+    }
+    func startRecording() {
+        NRSpeechToText.shared.startRecording {(result: String?, isFinal: Bool, error: Error?) in
+            if error == nil {
+                self.storyTxtView.text = result
+            }
+        }
+    }
+    
+    func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
+        // Called when the availability of the given recognizer changes
         
     }
+    
     
     @IBAction func uploadBtnTapped(_ sender: UIButton) {
         let dbopGet = DBoperationGet()
