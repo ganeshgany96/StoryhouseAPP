@@ -36,7 +36,7 @@ class DBoperationGet: NSObject {
         let entity =  Entity()
         let request  = NSFetchRequest<NSFetchRequestResult>(entityName:entity.post )
         request.returnsObjectsAsFaults = false
-        let isdraft = "1"
+        let isdraft = "0"
         request.predicate = NSPredicate(format: "isDraft == %@", isdraft)
         var arrobj = [Any]()
         do {

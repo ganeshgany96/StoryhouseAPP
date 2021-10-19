@@ -13,4 +13,5 @@ class Host: NSObject {
     let googleupload = "\(strPath)/googleResultUpload"
     let postupload = "\(strPath)/postResultUpload"
     let searchreq = "\(strPath)/SearchPost/"
+    let getallpost = "\(strPath)/Getallpost"
 }
