@@ -56,9 +56,7 @@ class SyncProcess: NSObject {
         print(objUrl!)
         Alamofire.request(url).responseJSON{ response in
             if response.result.isSuccess {
-
                 SuccessBlock(response.result.value as! NSArray)
-
             }else if response.result.isFailure{
                 FailureBlock(response.result.value  as! NSArray)
             }
@@ -71,9 +69,7 @@ class SyncProcess: NSObject {
         print(objUrl!)
         Alamofire.request(url).responseJSON{ response in
             if response.result.isSuccess {
-
                 SuccessBlock(response.result.value as! NSArray)
-
             }else if response.result.isFailure{
                 FailureBlock(response.result.value  as! NSArray)
             }
@@ -85,9 +81,7 @@ class SyncProcess: NSObject {
         print(objUrl!)
         Alamofire.request(url).responseJSON{ response in
             if response.result.isSuccess {
-
                 SuccessBlock(response.result.value as! NSArray)
-
             }else if response.result.isFailure{
                 FailureBlock(response.result.value  as! NSArray)
             }
