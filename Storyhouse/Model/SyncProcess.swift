@@ -50,13 +50,39 @@ class SyncProcess: NSObject {
             }
         }
     }
+    func infoDeatilUpload(url:String,objdata:Data,success SuccessBlock: @escaping (NSDictionary)->Void,  Failure FailureBlock: @escaping (NSDictionary)->Void){
+        let objUrl = URL(string: url)
+        var request = URLRequest(url: objUrl!)
+        request.httpMethod = "POST"
+        request.setValue("application/json;", forHTTPHeaderField: "Content-Type")
+        request.httpBody  = objdata
+        Alamofire.request(request).responseJSON { response in
+            if response.result.isSuccess {
+                SuccessBlock(response.result.value as! NSDictionary)
+            }else if response.result.isFailure{
+                FailureBlock(response.result.value as! NSDictionary)
+            }
+        }
+    }
     
     func searchTitlePost(url:String,success SuccessBlock: @escaping (NSArray)->Void,  Failure FailureBlock: @escaping (NSArray)->Void){
         let objUrl = URL(string: url)
         print(objUrl!)
         Alamofire.request(url).responseJSON{ response in
             if response.result.isSuccess {
-                SuccessBlock(response.result.value as! NSArray)
+                let objres = response.result.value as! [NSDictionary]
+                let status =  objres[0]
+                let ifcheck = status.value(forKey: "status")
+                if ifcheck == nil {
+                    SuccessBlock(response.result.value as! NSArray)
+                    return
+                }
+                if ifcheck as! String == "failure" {
+                    FailureBlock(response.result.value  as! NSArray)
+                }else{
+                    SuccessBlock(response.result.value as! NSArray)
+                }
+                
             }else if response.result.isFailure{
                 FailureBlock(response.result.value  as! NSArray)
             }
@@ -81,7 +107,18 @@ class SyncProcess: NSObject {
         print(objUrl!)
         Alamofire.request(url).responseJSON{ response in
             if response.result.isSuccess {
-                SuccessBlock(response.result.value as! NSArray)
+                let objres = response.result.value as! [NSDictionary]
+                let status =  objres[0]
+                let ifcheck = status.value(forKey: "status")
+                if ifcheck == nil {
+                    SuccessBlock(response.result.value as! NSArray)
+                    return
+                }
+                if ifcheck as! String == "failure" {
+                    FailureBlock(response.result.value  as! NSArray)
+                }else{
+                    SuccessBlock(response.result.value as! NSArray)
+                }
             }else if response.result.isFailure{
                 FailureBlock(response.result.value  as! NSArray)
             }

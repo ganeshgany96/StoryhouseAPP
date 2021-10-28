@@ -27,6 +27,7 @@
 		CF587C6426F50AC90096D4FD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF587C6326F50AC90096D4FD /* SearchViewController.swift */; };
 		CF587C6626F50AD20096D4FD /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF587C6526F50AD20096D4FD /* PostViewController.swift */; };
 		CF587C6826F50ADA0096D4FD /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF587C6726F50ADA0096D4FD /* AccountViewController.swift */; };
+		CF5ACDCA272884EE007C9F7A /* ReadMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5ACDC9272884EE007C9F7A /* ReadMoreViewController.swift */; };
 		CF90215326F5F23A0071F086 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF90215226F5F23A0071F086 /* CreatePostViewController.swift */; };
 		CF90215526F5F5A40071F086 /* Host.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF90215426F5F5A40071F086 /* Host.swift */; };
 		CF90215726F5F5CB0071F086 /* SyncProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF90215626F5F5CB0071F086 /* SyncProcess.swift */; };
@@ -60,6 +61,7 @@
 		CF587C6326F50AC90096D4FD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CF587C6526F50AD20096D4FD /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		CF587C6726F50ADA0096D4FD /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		CF5ACDC9272884EE007C9F7A /* ReadMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadMoreViewController.swift; sourceTree = "<group>"; };
 		CF90215226F5F23A0071F086 /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		CF90215426F5F5A40071F086 /* Host.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Host.swift; sourceTree = "<group>"; };
 		CF90215626F5F5CB0071F086 /* SyncProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncProcess.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				CF587C6326F50AC90096D4FD /* SearchViewController.swift */,
 				CF587C6726F50ADA0096D4FD /* AccountViewController.swift */,
 				CF587C6526F50AD20096D4FD /* PostViewController.swift */,
+				CF5ACDC9272884EE007C9F7A /* ReadMoreViewController.swift */,
 				CF3DF1D527061E1600CA695B /* cell */,
 				CF90215226F5F23A0071F086 /* CreatePostViewController.swift */,
 				CF20545227022F7400E56EBF /* TabViewController.swift */,
@@ -308,6 +311,7 @@
 				CF357BB9271F2CCF007F09F6 /* TopFavTableViewCell.swift in Sources */,
 				CF3C59D92707699100D05FD3 /* SearchPostTableViewCell.swift in Sources */,
 				CF3DF1D427061E0C00CA695B /* DraftListTableViewCell.swift in Sources */,
+				CF5ACDCA272884EE007C9F7A /* ReadMoreViewController.swift in Sources */,
 				CF90215926F606BD0071F086 /* GoogleObject.swift in Sources */,
 				CF3C59DB2707889600D05FD3 /* ShoryHouseTableViewCell.swift in Sources */,
 				CF094F7A26F26A280043BB14 /* GoogleLoginViewController.swift in Sources */,
