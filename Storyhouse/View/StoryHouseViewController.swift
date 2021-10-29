@@ -11,6 +11,7 @@ class StoryHouseViewController: UIViewController {
     
     @IBOutlet weak var storyhouseTable: UITableView!
     
+    var readbtn = Int()
     
     var arrobj = [NSArray]()
     override func viewDidLoad() {
@@ -51,6 +52,8 @@ extension StoryHouseViewController:UITableViewDataSource{
         cell.likeBtb.tag = indexPath.row
         cell.likeBtb.addTarget(self, action: #selector(likebtn(sender:)), for: .touchUpInside)
         cell.subscribeBtn.addTarget(self, action: #selector(subscribe(sender:)), for: .touchUpInside)
+        cell.readmoreBtn.tag = indexPath.row
+        cell.readmoreBtn.addTarget(self, action: #selector(readmore(sender:)), for: .touchUpInside)
         
 
 
@@ -59,6 +62,10 @@ extension StoryHouseViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 315
         
+    }
+    @objc func readmore(sender: UIButton){
+        self.readbtn = sender.tag
+        performSegue(withIdentifier: "ReadMoreViewController", sender: sender.tag)
     }
     @objc func subscribe(sender: UIButton){
         let obj = arrobj as! [NSDictionary]
@@ -100,6 +107,12 @@ extension StoryHouseViewController:UITableViewDataSource{
             sender.setImage(UIImage(systemName: "heart"), for: .normal)
         }
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? ReadMoreViewController {
+            let obj = arrobj as! [NSDictionary]
+            vc.arrobj = obj[readbtn]
+        }
+    }
 }
 extension StoryHouseViewController{
     
@@ -114,3 +127,4 @@ extension StoryHouseViewController{
 
     }
 }
+

@@ -7,7 +7,7 @@
 
 import UIKit
 
-let strPath = "http://192.168.1.5:1030"
+let strPath = "http://192.168.1.2:1030"
 
 class Host: NSObject {
     let googleupload = "\(strPath)/googleResultUpload"

@@ -192,6 +192,7 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="storyhouseTable" destination="7hu-e3-KPg" id="L1Y-wM-V3l"/>
+                        <segue destination="pyz-II-jwU" kind="show" identifier="ReadMoreViewController" id="uOZ-Nr-FBV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sYn-cc-vwi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -201,7 +202,7 @@
         <!--Read More View Controller-->
         <scene sceneID="jcd-Uu-blL">
             <objects>
-                <viewController id="pyz-II-jwU" customClass="ReadMoreViewController" customModule="Storyhouse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="pyz-II-jwU" customClass="ReadMoreViewController" customModule="Storyhouse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="heX-iL-poi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -213,6 +214,9 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Back"/>
+                                <connections>
+                                    <action selector="backBtnTapped:" destination="pyz-II-jwU" eventType="touchUpInside" id="GRe-YH-fJC"/>
+                                </connections>
                             </button>
                             <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Au7-6n-YHU">
                                 <rect key="frame" x="20" y="69" width="374" height="647"/>
@@ -227,6 +231,7 @@
                         <viewLayoutGuide key="safeArea" id="9kq-YH-lhT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="dMs-CQ-bOY"/>
                     <connections>
                         <outlet property="webView" destination="Au7-6n-YHU" id="FR7-aP-hag"/>
                     </connections>
